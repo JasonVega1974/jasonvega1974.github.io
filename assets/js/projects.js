@@ -79,6 +79,19 @@ const PROJECTS = [
     featured: false,
   },
   {
+    id: "legacy-vault",
+    name: "Legacy Vault",
+    tagline: "A secure vault for family legacy",
+    description:
+      "A private place to preserve family documents, memories, and legacy in one secure vault.",
+    url: "https://yourlifecc.com/legacy-vault",
+    thumb: "assets/img/legacy-vault.png",
+    category: "Faith & Family",
+    tags: ["Vault", "Family", "Storage"],
+    status: "Live",
+    featured: false,
+  },
+  {
     id: "estatesalebiz",
     name: "Estate Sale Biz",
     tagline: "Estate sale business online",
