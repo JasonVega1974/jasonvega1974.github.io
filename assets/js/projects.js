@@ -78,6 +78,19 @@ const PROJECTS = [
     status: "Live",
     featured: false,
   },
+  {
+    id: "domvegz",
+    name: "Dom Vegz",
+    tagline: "EDM producer & DJ",
+    description:
+      "Music brand and site for Dom Vegz — EDM producer and DJ out of Nampa, Idaho.",
+    url: "https://domvegz.com",
+    thumb: "assets/img/domvegz.png",
+    category: "Music & Creative",
+    tags: ["Music", "Web", "Brand"],
+    status: "Live",
+    featured: false,
+  },
 
   /* ------------------------------------------------------------
      Netlify experiment — intentionally left OFF the grid until it
