@@ -58,7 +58,7 @@ const PROJECTS = [
     tagline: "A guided faith journey inside YourLife CC",
     description:
       "A guided, daily faith journey experience that lives inside the YourLife CC ecosystem.",
-    url: "https://yourlifecc.com/faith-journey",
+    url: "https://yourlifecc.com/faith",
     thumb: "assets/img/faith-journey.png",
     category: "Faith & Family",
     tags: ["Faith", "Content", "Daily"],
