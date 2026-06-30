@@ -66,6 +66,19 @@ const PROJECTS = [
     featured: false,
   },
   {
+    id: "return",
+    name: "Return",
+    tagline: "Church inventory database",
+    description:
+      "Inventory system for our church — tracks stock for ordering, counting, and auditing.",
+    url: "https://yourlifecc.com/return",
+    thumb: "assets/img/return.png",
+    category: "Faith & Family",
+    tags: ["Inventory", "Database", "Church"],
+    status: "Live",
+    featured: false,
+  },
+  {
     id: "estatesalebiz",
     name: "Estate Sale Biz",
     tagline: "Estate sale business online",
