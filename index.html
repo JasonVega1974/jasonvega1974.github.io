@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Vega — Portfolio Hub</title>
+  <meta name="description" content="Jason Vega — I design and build production software and systems, solo. A hub for every project: Kingdom Creatives, YourLife CC, Systems by Vega, and more." />
+
+  <!-- Open Graph / Twitter (Phase 4 — update og:url + og:image once live) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jason Vega — Portfolio Hub" />
+  <meta property="og:description" content="I design and build production software and systems, solo." />
+  <meta property="og:url" content="https://jasonvega.com/" />
+  <meta property="og:image" content="assets/img/og-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jason Vega — Portfolio Hub" />
+  <meta name="twitter:description" content="I design and build production software and systems, solo." />
+  <meta name="twitter:image" content="assets/img/og-cover.png" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top">
+        <span class="brand__mark">JV</span>
+        <span class="brand__name">Jason Vega</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a class="btn btn--ghost" href="mailto:info@kingdom-creatives.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="container">
+      <p class="hero__eyebrow">Portfolio Hub</p>
+      <h1 class="hero__title">
+        I design and build production<br />software and systems, <span class="accent">solo</span>.
+      </h1>
+      <p class="hero__sub">
+        One home for everything I ship — faith &amp; family apps, commercial systems, and experiments.
+        <strong><span id="project-count">0</span> projects</strong> and counting.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#work">See the work</a>
+        <a class="btn btn--ghost" href="mailto:info@kingdom-creatives.com">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <main class="work" id="work">
+    <div class="container">
+      <div class="work__head">
+        <h2 class="section-title">Projects</h2>
+        <div class="filters" id="filters" role="tablist" aria-label="Filter projects by category"></div>
+      </div>
+      <div class="grid" id="grid"><!-- cards render here --></div>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <h2 class="section-title">About</h2>
+      <p>
+        I'm Jason Vega. I design and build production software end to end — process and databases,
+        dashboards, web apps, and faith tech — usually solo, from the first sketch to the live site.
+      </p>
+      <p>
+        This hub sits above my individual brands and links out to each one. If you want something built
+        the same way, reach me at
+        <a href="mailto:info@kingdom-creatives.com">info@kingdom-creatives.com</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>&copy; <span id="year">2026</span> Jason Vega · A Kingdom Creatives LLC project</p>
+      <a href="mailto:info@kingdom-creatives.com">info@kingdom-creatives.com</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/projects.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
