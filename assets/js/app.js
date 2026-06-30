@@ -6,7 +6,9 @@
 (function () {
   "use strict";
 
-  const projects = (window.PROJECTS || []).slice();
+  // Data lives in assets/data/projects.json (edited via the admin page).
+  // Fallback to window.PROJECTS if a legacy inline list is present.
+  const DATA_URL = "assets/data/projects.json";
 
   // ---- helpers -------------------------------------------------
   const $ = (sel, root) => (root || document).querySelector(sel);
@@ -163,19 +165,40 @@
     if (el) el.textContent = String(list.length);
   }
 
-  // ---- init ----------------------------------------------------
-  function init() {
-    const grid = $("#grid");
-    if (!grid) return;
-
+  function render(grid, projects) {
     const ordered = sortProjects(projects);
     setCount(ordered);
     buildFilters(grid, ordered);
-
     ordered.forEach((p) => grid.appendChild(cardEl(p)));
+  }
+
+  async function loadProjects() {
+    if (Array.isArray(window.PROJECTS) && window.PROJECTS.length) {
+      return window.PROJECTS.slice();
+    }
+    const res = await fetch(DATA_URL, { cache: "no-store" });
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    return res.json();
+  }
+
+  // ---- init ----------------------------------------------------
+  async function init() {
+    const grid = $("#grid");
+    if (!grid) return;
 
     const yearEl = $("#year");
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+    try {
+      const projects = await loadProjects();
+      render(grid, projects);
+    } catch (e) {
+      grid.innerHTML =
+        '<p style="color:var(--muted);grid-column:1/-1">Couldn’t load projects. ' +
+        "If you’re viewing this as a local file, run a local server " +
+        "(e.g. <code>python -m http.server</code>) so the data file can load.</p>";
+      console.error("Failed to load projects:", e);
+    }
   }
 
   if (document.readyState === "loading") {
